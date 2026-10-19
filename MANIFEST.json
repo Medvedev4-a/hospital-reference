@@ -1,0 +1,212 @@
+{
+  "database": "hospital_reference",
+  "metadata": {
+    "database": "hospital_reference",
+    "version": "PostgreSQL 18.6 on x86_64-windows, compiled by msvc-19.44.35229, 64-bit",
+    "generated_at": "2026-10-19T03:02:20.471231+05:00",
+    "timezone": "Asia/Qyzylorda",
+    "size_bytes": 2204571327,
+    "size_display": "2102 MB",
+    "partitions": 48,
+    "foreign_keys": 186,
+    "indexes": 533,
+    "table_count": 91,
+    "row_count": 7295073,
+    "rls_tables": 50,
+    "schema_count": 16
+  },
+  "verification": {
+    "sql_tests_passed": 83,
+    "full_restore": true,
+    "concurrency_scenarios_passed": 2,
+    "registrar_write_workflows": true,
+    "report_browser_qa": true
+  },
+  "files": [
+    {
+      "name": "00_bootstrap.sql",
+      "bytes": 3674,
+      "sha256": "cea7d851d751c58ee6a35eb0cf2faaabe36b5398684da20b964f11e8e102eecd"
+    },
+    {
+      "name": "01_organization_patient.sql",
+      "bytes": 7467,
+      "sha256": "23147c165f4a1c18dee39c1177cf548e8a443bb18b5e074db5bf30d95ecaee32"
+    },
+    {
+      "name": "02_clinical.sql",
+      "bytes": 15702,
+      "sha256": "90a65a4070346a046367362dcd0c273f7b75655f09b7e78568685f6336d40ed5"
+    },
+    {
+      "name": "03_operations.sql",
+      "bytes": 13277,
+      "sha256": "335c9fde45a3371460ac4df2d150acd53d1f458a6f96919f7fd7cfb2f7851fff"
+    },
+    {
+      "name": "04_integrity.sql",
+      "bytes": 15550,
+      "sha256": "d6388085bc8ec661d200b316063d13e42c60fed083a7202667d6d59b3c69250c"
+    },
+    {
+      "name": "05_seed.sql",
+      "bytes": 24778,
+      "sha256": "f6dcc91d97b34829e8ad1fec949771ccc50db190e25aff2b64c8a235417a34be"
+    },
+    {
+      "name": "06_security_analytics.sql",
+      "bytes": 19671,
+      "sha256": "4d008c193cf6eb6a8864ab839626ee27c432f11e2e00a5a706589f9eacbcde78"
+    },
+    {
+      "name": "07_hardening.sql",
+      "bytes": 8532,
+      "sha256": "f017752717b54ba03b6a6724f2a5c80d545dfceb5a4cbaea099f52da5527a344"
+    },
+    {
+      "name": "08_validate.sql",
+      "bytes": 20858,
+      "sha256": "113ca4a2d4b4644ed53936b56921f1d734e08b998ad67a964652b7af29de95fc"
+    },
+    {
+      "name": "09_authorized_workflows.sql",
+      "bytes": 1388,
+      "sha256": "9f1a5c0bfa1bc510e82695d127dbf5a7fac215f2a5003abd402e9c5aeceaedd1"
+    },
+    {
+      "name": "10_validate_registrar.sql",
+      "bytes": 988,
+      "sha256": "51552b0e20b3b03eaac4cf1cf7b0f19b983359e50a21a9c065ac59a2aeb5f240"
+    },
+    {
+      "name": "authorized_workflows.log",
+      "bytes": 315,
+      "sha256": "f7e58eaa6a1c8c8d94b67595312c8c556f7ee6a16f68951c753a9f734e0ce235"
+    },
+    {
+      "name": "build_report.py",
+      "bytes": 10888,
+      "sha256": "6362fec69e80ba6cfdb7891e27e2c059fdf1dc650eae9c274f1c7d58d3d19585"
+    },
+    {
+      "name": "catalog.json",
+      "bytes": 501122,
+      "sha256": "f803998ef6f637bb126a62479d8606be45f6568f472a21888db6d85f28e7aa39"
+    },
+    {
+      "name": "check_report.cjs",
+      "bytes": 1691,
+      "sha256": "7456ab612fe949ce777960849178cad9e2e4478fc21e0ed36d24135c2b439c61"
+    },
+    {
+      "name": "concurrency_check.py",
+      "bytes": 4640,
+      "sha256": "a16a4593852180c598e5c4b0eaf5f167f7c7d81da134bbac52a4361387ff1879"
+    },
+    {
+      "name": "concurrency_results.json",
+      "bytes": 479,
+      "sha256": "f32ad23a84da2111ef9662c4f9aa8c36442e73dbdf0064b4cdceff49ee50d3b9"
+    },
+    {
+      "name": "DATA_DICTIONARY.md",
+      "bytes": 199629,
+      "sha256": "bca4968170859ebf47fbc1af88e77c89d518db680c9c07cc0829745bddf070be"
+    },
+    {
+      "name": "DATA_MODEL.md",
+      "bytes": 18758,
+      "sha256": "dc64a003cb07fd92657aa4a699eb7ef21145b5eba40ef0f668aa1cca75286a24"
+    },
+    {
+      "name": "deploy.ps1",
+      "bytes": 2477,
+      "sha256": "5856994ad8cb0230890dfb07fa108d299a02fd8165504192719aca26127f29ce"
+    },
+    {
+      "name": "examples.sql",
+      "bytes": 3755,
+      "sha256": "1bf6fee51af9b849b2f08a41f7dca4ef177d607f255f06d5e28140b6bd3c7bec"
+    },
+    {
+      "name": "hospital_reference.backup",
+      "bytes": 91045842,
+      "sha256": "b950efd0cfbb52bbce1e90a7f747be1f3b09dac3cf9a7eed05e4e5253b131b1a"
+    },
+    {
+      "name": "package_project.py",
+      "bytes": 2945,
+      "sha256": "b46339d0eb5d3aafb97780c97e2c86a401ed9214de0be38dbf735c136a96d629"
+    },
+    {
+      "name": "query_plans.json",
+      "bytes": 25842,
+      "sha256": "3958d36b40da8403b05ebdd4dccd4d415ad0dfa338934b0292819ee185e9d7c7"
+    },
+    {
+      "name": "README.md",
+      "bytes": 15206,
+      "sha256": "bd540042f0f50b5dee282d8335f30426324cdd597f20743029e0c320d647ad89"
+    },
+    {
+      "name": "report-preview.png",
+      "bytes": 91470,
+      "sha256": "9d48c42685ff716bdb8179368aae9a73e863be7326be71c679efb8f7f2b8aa8e"
+    },
+    {
+      "name": "report.html",
+      "bytes": 358611,
+      "sha256": "064f01b4325f31d1b048da23bed96179123962d2449c66f3835fd6ae984ad7fe"
+    },
+    {
+      "name": "report.template.html",
+      "bytes": 12447,
+      "sha256": "554a378a26be563af26741f3195808b1f5bb254408b994ece597d9fb46105ab4"
+    },
+    {
+      "name": "report_qa.json",
+      "bytes": 176,
+      "sha256": "d2ba32b4587c5b52ff93027a999b8c121484581e77fc51c662a263c5efa61c24"
+    },
+    {
+      "name": "restore.ps1",
+      "bytes": 2221,
+      "sha256": "0eb09ebd4e8d6d14138d62e85b1bd129d2c523191a9f266a285c1340cf0e5eff"
+    },
+    {
+      "name": "restore_authorized_workflows.log",
+      "bytes": 68,
+      "sha256": "cd602eb25bda74ce251dc5e71edde45ef4f428125b8732bebe5fcdfbe1fd5628"
+    },
+    {
+      "name": "restore_results.json",
+      "bytes": 327,
+      "sha256": "9f8d1f8773d86c510b0f84dda9c27380509162b576004efdaef725179c66dd2c"
+    },
+    {
+      "name": "roles.sql",
+      "bytes": 1174,
+      "sha256": "d530d8fd569003d49ffa2b48ec1bfcebb424c1a5c0b2f161073ad70cd095702d"
+    },
+    {
+      "name": "schema.sql",
+      "bytes": 736972,
+      "sha256": "dfc3210f96b445391f5df2d5833e567ca67d4468d1b545ac7b29bce8ad6a1653"
+    },
+    {
+      "name": "validation_results.csv",
+      "bytes": 2862,
+      "sha256": "0024e8fe4d4e7c20785e197f23d584cf04f22ad9fa431d312eb04d3532b59d0b"
+    },
+    {
+      "name": "VERIFICATION.md",
+      "bytes": 2850,
+      "sha256": "3e142afa5ef26f91b91e0f7ee29c656de1a5f9c7824fd08b26ae4bb12c31ecd2"
+    },
+    {
+      "name": "verify_and_backup.ps1",
+      "bytes": 4403,
+      "sha256": "0f2ba5a2fe8f539a6cd4333a67e17d38d9da50cea4e3b5b2ea771accbd8c3e07"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "database": "hospital_reference_restore_check",
+  "registrar_workflows": {
+    "passed": true
+  },
+  "stock_race": {
+    "passed": true,
+    "concurrent_requests": 2,
+    "successful_requests": 1,
+    "opening_stock": 10,
+    "requested_each": 7,
+    "closing_stock": 3.0
+  },
+  "payment_race": {
+    "passed": true,
+    "concurrent_requests": 2,
+    "successful_requests": 1,
+    "invoice_amount": 10,
+    "requested_each": 7,
+    "allocated": 7.0
+  }
+}

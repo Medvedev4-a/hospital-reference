@@ -1,0 +1,23 @@
+const {chromium}=require('C:/Users/D M/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const fs=require('node:fs');
+const path=require('node:path');
+(async()=>{
+ const browser=await chromium.launch({headless:true,channel:'msedge'});
+ const page=await browser.newPage({viewport:{width:1440,height:1100},deviceScaleFactor:1});
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto('file:///'+path.join(__dirname,'report.html').replaceAll('\\','/'));
+ await page.waitForSelector('#table-list button');
+ const count=await page.locator('#table-list button').count();
+ await page.locator('#search').fill('lab.');
+ const filtered=await page.locator('#table-list button').count();
+ await page.locator('#table-list button').first().click();
+ const selected=await page.locator('#table-title').innerText();
+ await page.locator('#search').fill('');
+ await page.locator('button[data-key="mpi.patient"]').click();
+ await page.screenshot({path:path.join(__dirname,'report-preview.png'),fullPage:false});
+ await page.setViewportSize({width:390,height:844});
+ const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>window.innerWidth+1);
+ const result={passed:errors.length===0&&count>=90&&filtered===6&&selected.startsWith('lab.')&&!overflow,table_count:count,lab_filter_results:filtered,selected_table:selected,mobile_horizontal_overflow:overflow,browser_errors:errors};
+ fs.writeFileSync(path.join(__dirname,'report_qa.json'),JSON.stringify(result,null,2));
+ await browser.close();console.log(JSON.stringify(result,null,2));if(!result.passed)process.exitCode=1;
+})().catch(e=>{console.error(e);process.exitCode=1});

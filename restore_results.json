@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "full_restore_verified": true,
+  "sql_tests_on_restore": 83,
+  "concurrent_tests": 2,
+  "disposable_database_removed": true,
+  "backup_bytes": 91045842,
+  "backup_sha256": "B950EFD0CFBB52BBCE1E90A7F747BE1F3B09DAC3CF9A7EED05E4E5253B131B1A",
+  "verified_at": "2026-10-19T03:02:18.4213527+05:00"
+}
